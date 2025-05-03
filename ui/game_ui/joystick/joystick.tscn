@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbk67bx266n4t"]
+
+[ext_resource type="Script" path="res://ui/game_ui/joystick/joystick.gd" id="1_lp2jp"]
+[ext_resource type="Script" path="res://ui/game_ui/joystick/Knob.gd" id="2_r08fb"]
+
+[sub_resource type="Gradient" id="Gradient_6iv8i"]
+offsets = PackedFloat32Array(0.993506, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ftsqi"]
+gradient = SubResource("Gradient_6iv8i")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_wsf8k"]
+offsets = PackedFloat32Array(0.993506, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_voesq"]
+gradient = SubResource("Gradient_wsf8k")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Joystick" type="Node2D"]
+script = ExtResource("1_lp2jp")
+
+[node name="Ring" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_ftsqi")
+
+[node name="Knob" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_voesq")
+script = ExtResource("2_r08fb")

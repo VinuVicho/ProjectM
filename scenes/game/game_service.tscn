@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://58fquc8yvg6t"]
+[gd_scene load_steps=5 format=3 uid="uid://58fquc8yvg6t"]
+
+[ext_resource type="Script" path="res://scenes/game/game_service.gd" id="1_ntjp0"]
+[ext_resource type="PackedScene" uid="uid://c1dxf7wvmb5tu" path="res://scenes/game/characters/base_character.tscn" id="2_nkxt1"]
+[ext_resource type="PackedScene" uid="uid://dyissvogocr44" path="res://ui/game_ui/joystick/joystick/joystick.tscn" id="3_q51ke"]
+[ext_resource type="Texture2D" uid="uid://ber8p7ti6n5pv" path="res://icon.svg" id="4_brylq"]
 
 [node name="GameService" type="Node2D"]
+script = ExtResource("1_ntjp0")
+
+[node name="BaseCharacter" parent="." instance=ExtResource("2_nkxt1")]
+z_index = 10
+
+[node name="Camera2D" type="Camera2D" parent="BaseCharacter"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Left" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -648.0
+offset_bottom = -648.0
+grow_vertical = 0
+
+[node name="MoveJoystick" parent="CanvasLayer/Left" instance=ExtResource("3_q51ke")]
+position = Vector2(77, 505)
+
+[node name="Right" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1152.0
+offset_top = -648.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="AimJoystick" parent="CanvasLayer/Right" instance=ExtResource("3_q51ke")]
+position = Vector2(997, 499)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(250, 123)
+scale = Vector2(11.9688, 5.29688)
+texture = ExtResource("4_brylq")
+
+[connection signal="joystick_input" from="CanvasLayer/Left/MoveJoystick" to="." method="_on_move_joystick_joystick_input"]
+[connection signal="joystick_input" from="CanvasLayer/Right/AimJoystick" to="." method="_on_aim_joystick_joystick_input"]

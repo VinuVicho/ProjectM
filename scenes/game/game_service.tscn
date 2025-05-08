@@ -13,9 +13,9 @@ z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="BaseCharacter"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="GameUI" type="CanvasLayer" parent="."]
 
-[node name="Left" type="Control" parent="CanvasLayer"]
+[node name="Left" type="Control" parent="GameUI"]
 layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
@@ -24,10 +24,10 @@ offset_top = -648.0
 offset_bottom = -648.0
 grow_vertical = 0
 
-[node name="MoveJoystick" parent="CanvasLayer/Left" instance=ExtResource("3_q51ke")]
+[node name="MoveJoystick" parent="GameUI/Left" instance=ExtResource("3_q51ke")]
 position = Vector2(77, 505)
 
-[node name="Right" type="Control" parent="CanvasLayer"]
+[node name="Right" type="Control" parent="GameUI"]
 layout_mode = 3
 anchors_preset = 3
 anchor_left = 1.0
@@ -41,13 +41,13 @@ offset_bottom = -648.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="AimJoystick" parent="CanvasLayer/Right" instance=ExtResource("3_q51ke")]
+[node name="AimJoystick" parent="GameUI/Right" instance=ExtResource("3_q51ke")]
 position = Vector2(997, 499)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(250, 123)
 scale = Vector2(11.9688, 5.29688)
 texture = ExtResource("4_brylq")
 
-[connection signal="joystick_input" from="CanvasLayer/Left/MoveJoystick" to="." method="_on_move_joystick_joystick_input"]
-[connection signal="joystick_input" from="CanvasLayer/Right/AimJoystick" to="." method="_on_aim_joystick_joystick_input"]
+[connection signal="joystick_input" from="GameUI/Left/MoveJoystick" to="." method="_on_move_joystick_joystick_input"]
+[connection signal="joystick_input" from="GameUI/Right/AimJoystick" to="." method="_on_aim_joystick_joystick_input"]

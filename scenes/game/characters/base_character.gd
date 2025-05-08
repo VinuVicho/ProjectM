@@ -7,11 +7,19 @@ var disabled := true
 
 var characterState: CharacterState
 
+func prepareCharacter(bulletPlace: Node2D) -> void:
+	$ShootComponent.prepare(bulletPlace)
+	disabled = false
+
 func _process(delta):
 	if ((health < 0) || disabled): return
-	var direction = characterState.moveDirection
+	var direction: Vector2 = characterState.moveDirection
 	
 	var velocity = direction * speed
+	
+	var shootDirection: Vector2 = characterState.aimDirection
+	if (shootDirection != Vector2.ZERO):
+		$ShootComponent.shoot(global_position, shootDirection)
 	
 	var collision = move_and_collide(velocity * delta)							#Returns obj of collision
 			#If CharacterBody2d

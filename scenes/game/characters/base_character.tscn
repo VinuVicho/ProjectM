@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1dxf7wvmb5tu"]
+[gd_scene load_steps=6 format=3 uid="uid://c1dxf7wvmb5tu"]
 
 [ext_resource type="Script" path="res://scenes/game/characters/base_character.gd" id="1_82ei7"]
+[ext_resource type="Script" path="res://scenes/game/characters/shoot_component.gd" id="2_263y6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2i4ia"]
 radius = 64.0
@@ -16,8 +17,8 @@ fill_from = Vector2(0.5, 0.5)
 
 [node name="BaseCharacter" type="CharacterBody2D"]
 script = ExtResource("1_82ei7")
-metadata/_edit_vertical_guides_ = [100.0, -100.0]
-metadata/_edit_horizontal_guides_ = [101.0, -100.0]
+metadata/_edit_vertical_guides_ = [64.0, -64.0]
+metadata/_edit_horizontal_guides_ = [64.0, -64.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2i4ia")
@@ -26,3 +27,12 @@ shape = SubResource("CircleShape2D_2i4ia")
 position = Vector2(0, -1.90735e-06)
 scale = Vector2(2, 2)
 texture = SubResource("GradientTexture2D_w08gs")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -100)
+
+[node name="ShootComponent" type="Node" parent="."]
+script = ExtResource("2_263y6")
+
+[node name="WeaponCooldown" type="Timer" parent="ShootComponent"]
+one_shot = true

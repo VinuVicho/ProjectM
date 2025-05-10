@@ -8,8 +8,8 @@ radius = 64.0
 
 [node name="BaseCharacter" type="CharacterBody2D"]
 script = ExtResource("1_82ei7")
-metadata/_edit_vertical_guides_ = [100.0, -100.0]
-metadata/_edit_horizontal_guides_ = [101.0, -100.0]
+metadata/_edit_vertical_guides_ = [64.0, -64.0]
+metadata/_edit_horizontal_guides_ = [64.0, -64.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2i4ia")

@@ -25,4 +25,3 @@ static func log_with_color(message, color: String = "ORANGE") -> void:
 	var logmsg = Time.get_time_string_from_system(true) + "| " + color + ": " + str(message)
 	logs.append(logmsg)
 	print_rich("[color=" + color + "]" + logmsg + "[/color]")
-

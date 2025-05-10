@@ -1,18 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1dxf7wvmb5tu"]
+[gd_scene load_steps=4 format=3 uid="uid://c1dxf7wvmb5tu"]
 
 [ext_resource type="Script" path="res://scenes/game/characters/base_character.gd" id="1_82ei7"]
+[ext_resource type="Texture2D" uid="uid://slld2v4yrac0" path="res://assets/ui/checkmark.png" id="2_b2rlr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2i4ia"]
 radius = 64.0
-
-[sub_resource type="Gradient" id="Gradient_bsdm3"]
-offsets = PackedFloat32Array(0.655844, 0.668831)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_w08gs"]
-gradient = SubResource("Gradient_bsdm3")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
 
 [node name="BaseCharacter" type="CharacterBody2D"]
 script = ExtResource("1_82ei7")
@@ -23,6 +15,6 @@ metadata/_edit_horizontal_guides_ = [101.0, -100.0]
 shape = SubResource("CircleShape2D_2i4ia")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1.90735e-06)
-scale = Vector2(2, 2)
-texture = SubResource("GradientTexture2D_w08gs")
+position = Vector2(0, 1)
+scale = Vector2(6, 6.13333)
+texture = ExtResource("2_b2rlr")

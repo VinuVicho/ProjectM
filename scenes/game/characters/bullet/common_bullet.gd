@@ -6,7 +6,6 @@ var parent_tank_id    = -1
 var velocity: Vector2 = Vector2(0, 0)
 
 func _ready():
-	Logger.log(33)
 	$LifeTime.start(time_life)
 
 func _physics_process(delta):
@@ -22,5 +21,4 @@ func onHit():
 	queue_free()
 
 func _on_life_time_timeout(): 
-	Logger.log(11)
 	queue_free()

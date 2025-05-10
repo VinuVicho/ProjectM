@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dyissvogocr44"]
 
 [ext_resource type="Texture2D" uid="uid://cb07f5d32uyos" path="res://ui/game_ui/joystick/joystick/outer.svg" id="1_tytwk"]
-[ext_resource type="Script" path="res://ui/game_ui/joystick/joystick/joystick.gd" id="2_eofdc"]
+[ext_resource type="Script" uid="uid://w80rebfdtnr5" path="res://ui/game_ui/joystick/joystick/joystick.gd" id="2_eofdc"]
 [ext_resource type="Texture2D" uid="uid://b02bdqw6pja28" path="res://ui/game_ui/joystick/joystick/inner.svg" id="3_14en0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rm106"]

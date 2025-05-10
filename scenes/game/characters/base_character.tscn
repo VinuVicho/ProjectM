@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c1dxf7wvmb5tu"]
 
-[ext_resource type="Script" path="res://scenes/game/characters/base_character.gd" id="1_82ei7"]
-[ext_resource type="Script" path="res://scenes/game/characters/shoot_component.gd" id="2_263y6"]
+[ext_resource type="Script" uid="uid://mhri2ofdsepi" path="res://scenes/game/characters/base_character.gd" id="1_82ei7"]
+[ext_resource type="Script" uid="uid://deo6l1qerhtk6" path="res://scenes/game/characters/shoot_component.gd" id="2_263y6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2i4ia"]
 radius = 64.0

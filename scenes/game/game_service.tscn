@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://58fquc8yvg6t"]
 
-[ext_resource type="Script" path="res://scenes/game/game_service.gd" id="1_ntjp0"]
+[ext_resource type="Script" uid="uid://bnunueswkuum8" path="res://scenes/game/game_service.gd" id="1_ntjp0"]
 [ext_resource type="PackedScene" uid="uid://c1dxf7wvmb5tu" path="res://scenes/game/characters/base_character.tscn" id="2_nkxt1"]
 [ext_resource type="PackedScene" uid="uid://dyissvogocr44" path="res://ui/game_ui/joystick/joystick/joystick.tscn" id="3_q51ke"]
 [ext_resource type="Texture2D" uid="uid://ber8p7ti6n5pv" path="res://icon.svg" id="4_brylq"]

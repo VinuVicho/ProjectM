@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="HeroData" load_steps=3 format=3 uid="uid://ck410cmxxpmjj"]
+
+[ext_resource type="Script" uid="uid://dnsmu86r7n75c" path="res://scripts/resource_scripts/hero_data.gd" id="1_oh1eg"]
+[ext_resource type="Texture2D" uid="uid://3mcq5g23fipo" path="res://assets/textures/Heroes/test_hero.png" id="2_233qp"]
+
+[resource]
+script = ExtResource("1_oh1eg")
+id = 1
+name = "Test HERO"
+hp = 100
+sprite = ExtResource("2_233qp")
+metadata/_custom_type_script = "uid://dnsmu86r7n75c"

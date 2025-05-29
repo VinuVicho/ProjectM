@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cagrudbpd152q"]
+
+[ext_resource type="Script" uid="uid://dgf2pqd38xeio" path="res://scripts/hero_selection/hero_select_menu.gd" id="1_2sxga"]
+[ext_resource type="Script" uid="uid://dnsmu86r7n75c" path="res://scripts/resource_scripts/hero_data.gd" id="2_vdkd3"]
+[ext_resource type="Resource" uid="uid://ck410cmxxpmjj" path="res://resources/heroes/test_hero.tres" id="3_hhuda"]
+[ext_resource type="Resource" uid="uid://bdi3eyxtuds8f" path="res://resources/heroes/test_hero_1.tres" id="4_vdkd3"]
+
+[node name="hero_select_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2sxga")
+hero_data = Array[ExtResource("2_vdkd3")]([ExtResource("3_hhuda"), ExtResource("4_vdkd3")])
+
+[node name="change_scene_button" type="Button" parent="."]
+layout_mode = 1
+offset_left = 368.0
+offset_top = 576.0
+offset_right = 775.0
+offset_bottom = 607.0
+text = "Start"
